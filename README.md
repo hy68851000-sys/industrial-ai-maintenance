@@ -1,3 +1,7 @@
+## 🌐 在线体验
+👉 [点击这里直接体验](https://industrial-ai-maintenance-6f3gmop2bmuvjpicdeyq44.streamlit.app/)
+
+
 # industrial-ai-maintenance
 工厂设备预测性维护系统 - 机器学习+LLM诊断
 # 工厂设备预测性维护系统
