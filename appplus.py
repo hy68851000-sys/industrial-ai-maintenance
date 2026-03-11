@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -87,3 +86,4 @@ Please provide in Chinese: 1.Risk level 2.Analysis 3.Recommendations
     else:
 
         st.success(result)
+
