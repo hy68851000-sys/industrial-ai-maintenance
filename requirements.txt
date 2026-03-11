@@ -1,7 +1,4 @@
 streamlit
 pandas
 scikit-learn
-zhipuai
-sniffio
-httpx==0.24.1
-pydantic<2.0
+openai
