@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -63,15 +64,16 @@ if st.button("🔍 开始诊断"):
     st.subheader("🤖 AI诊断报告")
     with st.spinner("AI分析中..."):
         prompt = f"""
-        你是工厂设备故障诊断专家。机器学习模型预测该设备故障概率为{prob*100:.1f}%。
-        设备参数：
-        - 空气温度：{air_temp}K（正常：295-305K）
-        - 加工温度：{process_temp}K（正常：305-315K）
-        - 转速：{rpm}RPM（正常：1300-1600RPM）
-        - 扭矩：{torque}Nm（正常：20-60Nm）
-        - 刀具磨损：{tool_wear}min（超200需更换）
-        请给出：1.风险等级 2.异常参数分析 3.建议措施
-        """
+You are a factory equipment diagnosis expert. 
+The ML model predicts failure probability: {prob*100:.1f}%.
+Equipment parameters:
+- Air temperature: {air_temp}K (normal: 295-305K)
+- Process temperature: {process_temp}K (normal: 305-315K)
+- Rotational speed: {rpm}RPM (normal: 1300-1600RPM)
+- Torque: {torque}Nm (normal: 20-60Nm)
+- Tool wear: {tool_wear}min (replace if over 200min)
+Please provide in Chinese: 1.Risk level 2.Analysis 3.Recommendations
+"""
         response = client.chat.completions.create(
             model="glm-4-flash",
             messages=[{"role": "user", "content": prompt}]
@@ -83,4 +85,5 @@ if st.button("🔍 开始诊断"):
     elif prob > 0.2:
         st.warning(result)
     else:
+
         st.success(result)
