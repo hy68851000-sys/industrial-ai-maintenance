@@ -3,5 +3,5 @@ pandas
 scikit-learn
 zhipuai
 sniffio
-httpx
+httpx==0.24.1
 pydantic<2.0
