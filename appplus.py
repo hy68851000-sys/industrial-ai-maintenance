@@ -3,9 +3,12 @@ import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from zhipuai import ZhipuAI
+from openai import OpenAI
 
-client = ZhipuAI(api_key="你的API_KEYa340d621d3514dfb91bb9917428806ee.Zp1oJ2QDsjhEoDWo")
+client = OpenAI(
+    api_key="a340d621d3514dfb91bb9917428806ee.Zp1oJ2QDsjhEoDWo",
+    base_url="https://open.bigmodel.cn/api/paas/v4/"
+)
 
 # 训练模型（只在第一次运行时训练）
 @st.cache_resource
@@ -86,4 +89,5 @@ Please provide in Chinese: 1.Risk level 2.Analysis 3.Recommendations
     else:
 
         st.success(result)
+
 
