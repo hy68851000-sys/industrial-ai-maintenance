@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from openai import OpenAI
 
 client = OpenAI(
-    api_key="a340d621d3514dfb91bb9917428806ee.Zp1oJ2QDsjhEoDWo",
+    api_key="50e002282d6345dda9853bc21b6b3227.rUrHRBXv1M7JG4uO",
     base_url="https://open.bigmodel.cn/api/paas/v4/"
 )
 
